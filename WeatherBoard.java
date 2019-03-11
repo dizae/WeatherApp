@@ -74,8 +74,22 @@ BufferedImage img;
                      //https://www.wikihow.com/Convert-Kelvin-to-Fahrenheit-or-Celsius
                      double cels = kTemp - 273.15;
                      double fahr = cels*(9/5) + 32;
-                      message = city + ": " + desc + ", Fahr: " + (int) fahr +  ", Celsius: " + (int) cels;
-                      System.out.println(message);
+                     message = city + ": " + desc + ", Fahr: " + (int) fahr +  ", Celsius: " + (int) cels;
+                     System.out.println(message);
+                     String t = "";
+                     if(fahr > 100){
+                        t = "It's boiling in here...";
+                        }
+                     else if(fahr > 60){
+                        t = "No need for a coat!";
+                        }
+                     else if(fahr > 20){
+                        t = "The chill is refreshing.";
+                        }
+                     else {
+                        t = "This cold is completely unreasonable.";
+                        }
+                    System.out.println(t); //Prints different messages for varying temperatures.
                     } catch (Exception e) {
                      e.printStackTrace();
                    }
